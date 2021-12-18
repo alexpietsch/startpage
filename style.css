@@ -1,0 +1,51 @@
+html {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(apod.png) no-repeat center center fixed black; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.timeContainer{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.timeText{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10em;
+}
+
+.search-input{
+    font-size: 20px;
+    background: none;
+    color: #fff;
+    outline: 0;
+    border-width: 0 0 1px;
+    border-color: rgb(148, 148, 148)
+}
+
+.search-input:focus{
+    outline: none;
+}
+
+.searchContainer{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+.search-btn{
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.search-icon{
+    height: 16px;
+    width: auto;
+}
