@@ -54,3 +54,10 @@ html {
     height: 16px;
     width: auto;
 }
+
+.creds{
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    color: #fff;
+}

@@ -24,5 +24,14 @@
         </button>
     </div>
     <script src="clock.js"></script>
+
+    <div class="creds">
+    <?php
+        $apikey = file_get_contents("apicreds.txt");
+        $content = file_get_contents("https://api.nasa.gov/planetary/apod?api_key=" . $apikey);
+        $result  = json_decode($content);
+        print_r($result->title . " - " . $result->copyright);
+    ?>
+    </div>
 </body>
 </html>
