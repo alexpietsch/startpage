@@ -9,18 +9,20 @@
     <title>Startseite</title>
 </head>
 <body>
-    <div class="timeContainer">
+    <div class="centerItems timeContainer">
         <span class="timeText" id="hour"></span>
         <span class="timeText">:</span>
         <span class="timeText" id="minute"></span>
     </div>
-    <div class="searchContainer">
+    <div class="centerItems dateContainer">
+        <span class="dateText" id="dateText"></span>
+    </div>
+    <div class="centerItems searchContainer">
         <input type="text" class="search-input" id="searchBox" placeholder="Search google">
         <button class="search-btn" type="button" onclick="doSearch()">
             <img class="search-icon" src="icons/search.svg" alt="search">
         </button>
     </div>
-
-    <script src="./index.js"></script>
+    <script src="clock.js"></script>
 </body>
 </html>

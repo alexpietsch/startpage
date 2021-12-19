@@ -4,19 +4,27 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.timeContainer{
+.centerItems{
     width:100%;
     display: flex;
     justify-content: center;
+}
+
+.timeContainer{
     margin-top: 10%;
 }
 
 .timeText{
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 10em;
+}
+
+.dateText{
+    color: white;
+    font-size: 1.2em;
 }
 
 .search-input{
@@ -33,9 +41,6 @@ html {
 }
 
 .searchContainer{
-    width:100%;
-    display: flex;
-    justify-content: center;
     margin-top: 3%;
 }
 
