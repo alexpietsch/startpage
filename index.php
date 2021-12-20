@@ -39,7 +39,7 @@
         <div class="creds">
             <p style="color:#fff">
                 <?php
-                    $apikey = file_get_contents("apicreds.txt");
+                    $apikey = file_get_contents("../../creds/apicreds.txt");
                     $content = file_get_contents("https://api.nasa.gov/planetary/apod?api_key=" . $apikey);
                     $result  = json_decode($content);
                     print_r($result->title . " - " . $result->copyright);
