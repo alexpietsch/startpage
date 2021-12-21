@@ -1,0 +1,145 @@
+html {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../apod.png) no-repeat center center fixed black; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.centerContainerItems{
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+
+.text-white{
+    color: #fff;
+}
+
+.timeContainer{
+    margin-top: 10%;
+}
+
+.timeText{
+    font-size: 10em;
+}
+
+.dateText{
+    font-size: 1.2em;
+}
+
+.search-input{
+    font-size: 20px;
+    background: none;
+    outline: 0;
+    border-width: 0 0 1px;
+    border-color: rgb(148, 148, 148)
+}
+
+.search-input:focus{
+    outline: none;
+}
+
+.searchContainer{
+    margin-top: 3%;
+}
+
+.search-btn{
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.search-icon{
+    height: 16px;
+    width: auto;
+}
+
+.creds{
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
+
+.ghlink{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.ghlink a{
+    text-decoration: none;
+}
+
+.locText{
+    padding: 1em;
+}
+
+.weatherContainer{
+    margin-top: 5%;
+}
+
+.weatherContainer p{
+    font-size: 1.5em;
+}
+
+
+#result {
+    position: absolute;
+    width: 100%;
+    max-width:870px;
+    cursor: pointer;
+    overflow-y: auto;
+    max-height: 400px;
+    box-sizing: border-box;
+    z-index: 1001;
+   }
+   .link-class:hover{
+    background-color:#f1f1f1;
+   }
+   
+
+/* ---- SIDE BAR NAV ---- */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  .sicenavOpenbtn {
+    font-size:30px;
+    cursor:pointer;
+    color:#fff;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+
+/* ---- END SIDE BAR NAV ---- */
+  
