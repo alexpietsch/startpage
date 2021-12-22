@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="js/clock.js"></script>
-    <script src="js/search.js"></script>
     <script src="js/sidenav.js"></script>
     <script src="js/searchCity.js"></script>
     <title>Startseite</title>
@@ -34,12 +33,6 @@
 
 
     <div id="main">
-
-        <p id="test"></p>
-
-
-
-
         <div class="centerContainerItems timeContainer text-white">
             <span class="timeText" id="hour"></span>
             <span class="timeText">:</span>
@@ -50,10 +43,11 @@
         </div>
         <div class="centerContainerItems searchContainer">
             <input type="text" class="search-input text-white" id="searchBox" placeholder="Search google">
-            <button class="search-btn" type="button" onclick="doSearch()">
+            <button id="search-btn" class="search-btn" type="button" onclick="doSearch()">
                 <img class="search-icon" src="assets/search.svg" alt="search">
             </button>
         </div>
+        <script src="js/search.js"></script>
 
         <div class="weatherContainer centerContainerItems text-white" id="weatherContainer">
             <p>
