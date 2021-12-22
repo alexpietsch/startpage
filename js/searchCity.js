@@ -59,6 +59,7 @@ $(document).ready(function(){
         d.setTime(d.getTime() + (3650*24*60*60*1000));
         let expires = "expires="+ d.toUTCString();
         document.cookie = "loc=" + click_text[0] + ";" + expires + "; SameSite=Strict; Secure;";
+        window.location = window.location;
         $("#searchCityContainer").hide();
         $("#setLoc").show();
         $("#weatherContainer").show();
