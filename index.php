@@ -17,17 +17,7 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="setLoc" id="setLoc">
             <p class="locText text-white" id="locText"></p>
-            <button id="setNewLocBtn" onclick="setLocation()">Neuen Standort wählen</button>
-        </div>
-        <div id="searchCityContainer" class="container" style="width:auto;">
-            <div align="center">
-                <input type="text" class="search-input text-white" name="search" id="search" placeholder="Suche Stadt" class="form-control" />
-                <br />
-                <button id="searchBtn">suchen</button>
-            </div>
-            <ul class="list-group text-white" id="result" style="list-style-type: none;"></ul>
-            <br />
-            <img id="loadgif" style="visibilit: none; width: 70px; height:auto" src="assets/spinner.gif" alt="">
+            <button id="setNewLocBtn" onclick="setLocation()">Standort setzen</button>
         </div>
     </div> 
 
@@ -44,7 +34,7 @@
         <div class="centerContainerItems searchContainer">
             <input type="text" class="search-input text-white" id="searchBox" placeholder="Search google">
             <button id="search-btn" class="search-btn" type="button" onclick="doSearch()">
-                <img class="search-icon" src="assets/search.svg" alt="search">
+                <img class="search-icon" src="assets/img/search.svg" alt="search">
             </button>
         </div>
         <script src="js/search.js"></script>
@@ -53,18 +43,19 @@
             <p>
                 <?php
                     $apikeyWeather = file_get_contents("../../creds/apicredsWeather.txt");
-                    $cityName = htmlspecialchars($_COOKIE["loc"]);
+                    $lat = htmlspecialchars($_COOKIE["_locLat"]);
+                    $lon = htmlspecialchars($_COOKIE["_locLon"]);
                     
-                    $content1 = file_get_contents("https://api.openweathermap.org/data/2.5/weather?q=".$cityName."&units=metric&lang=de&appid=".$apikeyWeather);
-                    $weatherData  = json_decode($content1);
+                    $content = file_get_contents("https://api.openweathermap.org/data/2.5/weather?lat=".$lat."&lon=".$lon."&units=metric&lang=de&appid=".$apikeyWeather);
+                    $weatherData  = json_decode($content);
                     $temp = $weatherData->main->temp;
                     $weatherDesc = $weatherData->weather[0]->description;
                     $tempMin = $weatherData->main->temp_min;
                     $tempMax = $weatherData->main->temp_max;
                     $iconID = $weatherData->weather[0]->icon;
+                    $cityName = $weatherData->name;
                     $iconUrl = "https://openweathermap.org/img/wn/".$iconID."@2x.png";
                     $image = base64_encode(file_get_contents($iconUrl));
-                    //print_r($cityName . ": " . $temp ."°C, Heute ". $tempMin ."°C bis ". $tempMax ."°C");
                     print_r($cityName . ": " . round($temp) ."°C, ". $weatherDesc);
                 ?>
             </p>
@@ -81,10 +72,6 @@
                     print_r($result->title . " - " . $result->copyright);
                 ?>
             </p>
-        </div>
-
-        <div class="ghlink">
-            <a class="text-white" href="https://github.com/autodidactor/startpage" target="_blank">Visit on GitHub</a>
         </div>
         </footer>
     </div>
